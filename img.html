@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <link rel="stylesheet" href="img.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="index">
+            <h1>Lamborghini Veneno</h1>
+            <img src="lamborghini.jpg" alt="">
+        </div>
+        <div class="index">
+            <h1>Bugatti Bolide</h1>
+            <img src="lg.jfif" alt="">
+        </div>
+        <div class="index">
+            <h1>BMW i4</h1>
+            <img src="bmw.jpg" alt="">
+        </div>
+        <div class="index">
+            <h1>Ferrari</h1>
+            <img src="ferrari.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        var elems = document.querySelectorAll(".index");
+
+        elems.forEach(function (elem) {
+            var img = elem.querySelector("img");
+
+            elem.addEventListener("mouseenter", function () {
+                img.style.opacity = 1; 
+            });
+
+            elem.addEventListener("mouseleave", function () {
+                img.style.opacity = 0;  
+            });
+
+            elem.addEventListener("mousemove", function (event) {
+                img.style.left = event.x + "px";
+            });
+        });
+
+    </script>
+</body>
+
+</html>
